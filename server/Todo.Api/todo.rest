@@ -1,0 +1,51 @@
+### Register 
+POST http://localhost:5001/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "amirul@gmail.com",
+  "password": "passw0rd123"
+}
+
+### Login
+POST http://localhost:5001/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "amirul@gmail.com",
+  "password": "passw0rd123"
+}
+
+# ----------------------------------------- #
+
+### Token
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhbWlydWxAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxIiwiZXhwIjoxNzcwMTgzMjQ4LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSJ9.fwfM-JC6k2vfzxskgJiygr8VCR2rJ_Str5BANkjIyXU
+### A READ All Todo Task
+GET http://localhost:5001/api/tasks
+Authorization: Bearer {{token}}
+
+### A CREATE Todo Task
+POST http://localhost:5001/api/tasks
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "title": "🤏 Drag Handle Icon",
+    "description": "Add a 'six-dot' drag icon to TodoItem to make the drag-and-drop intuitive.",
+    "isCompleted": false
+}
+
+### A UPDATE Todo Task
+PUT http://localhost:5001/api/tasks/2
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Finish homework (updated)",
+  "description": "Complete math and science homework ASAP",
+  "isCompleted": true
+}
+
+### A DELETE Todo Task
+DELETE http://localhost:5001/api/tasks/2
+Authorization: Bearer {{token}}

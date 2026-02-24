@@ -1,0 +1,43 @@
+/* Light Mode */
+:root {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-dim: #64748b;
+  --border-color: #cbd5e1;
+  --input-bg: #f1f5f9;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg-main: #0f1113;
+  --bg-card: #1a1d21;
+  --text-main: #e2e8f0;
+  --text-dim: #94a3b8;
+  --border-color: #2d3139;
+  --input-bg: #131517;
+}
+
+/* Global */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.card,
+.form-control,
+.modal-content,
+.todo-card {
+  border-color: var(--border-color) !important;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #3b82f6 !important;
+  background-color: var(--bg-card) !important;
+}
