@@ -1,4 +1,5 @@
 # Todo Application
+<img width="1120" height="634" alt="544782143-9a249c04-06dd-4bb1-9dfa-711395532ebb" src="https://github.com/user-attachments/assets/ca97e78f-87c8-450a-9a59-64d95f408895" />
 
 A full-stack todo application demonstrating modern web development practices with user authentication, task management, and responsive UI.
 
